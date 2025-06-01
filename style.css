@@ -40,8 +40,19 @@ li a{
 
 .container-1 , .container-2{
     justify-content:center;
+    /* margin:20px; */
+    gap:20px;
     align-items:center;
     display:flex;
+    /* position: relative; */
+    /* height:100vh; */
+}
+
+
+
+.col-sm{
+    padding:10px;
+    margin:0.5px;
 }
 
 .container-2{
@@ -54,17 +65,51 @@ li a{
     border-radius:50rem;
     height:30px;
     border:0.1rem;
-    padding:10px;
+    padding:9px;
+    margin-left:50px;
     text-decoration:none;
+    text-align:center;
 }
 
 .copyright{
-    align-items:center;
-    justify-content:center;
-    display:flex;
+    position: relative;
     background-color:black;
-    padding:20px;
+    /* padding:20px; */
     color:white;
-    height:100px;
+    height:20vh;
     margin-top:20px;
+}
+
+.footer-div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.footer-div > p{
+    font-size:15px;
+}
+
+@media(max-width:768px){
+     .row{
+         position:absolute;
+         left:50%;
+         top:50%;
+         transform:translate(-50%,-50%);
+     }
+
+     .container-1,.container-2{
+        position: relative;
+        height:100vh;
+        z-index:-1;
+     }
+     .footer-div > p{
+        font-size:10px;
+        font-weight:300;
+        text-align:center;
+     }
+     .fun{
+        font-size:10px;
+     }
 }
